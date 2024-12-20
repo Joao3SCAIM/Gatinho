@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatinho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="slot-machine">
+    <h2>Gatinho</h2>
+    <div class="reel-container">
+        <div class="column">
+            <div class="reel" id="reel1-1"><span class="symbol">🍊</span></div>
+            <div class="reel" id="reel1-2"><span class="symbol">🔔</span></div>
+            <div class="reel" id="reel1-3"><span class="symbol">🍎</span></div>
+        </div>
+        <div class="column">
+            <div class="reel" id="reel2-1"><span class="symbol">🍒</span></div>
+            <div class="reel" id="reel2-2"><span class="symbol">💰</span></div>
+            <div class="reel" id="reel2-3"><span class="symbol">🍇</span></div>
+        </div>
+        <div class="column">
+            <div class="reel" id="reel3-1"><span class="symbol">🍇</span></div>
+            <div class="reel" id="reel3-2"><span class="symbol">🍊</span></div>
+            <div class="reel" id="reel3-3"><span class="symbol">🔔</span></div>
+        </div>
+    </div>
+    <button class="spin-button" onclick="spin()">Girar</button>
+    <div class="result" id="result"></div>
+    <button class="win-mode-button" id="winModeButton" onclick="toggleWinMode()">💲 OFF</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

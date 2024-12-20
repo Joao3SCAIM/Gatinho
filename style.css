@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0e5d8;
+}
+
+.slot-machine {
+    width: 300px;
+    background: #d4a373;
+    border: 2px solid #c49a6c;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reel-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reel {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: #f5d27d;
+    transition: background-color 0.3s ease;
+}
+
+.symbol {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza as frutas dentro dos quadrados */
+    transition: transform 0.5s ease; /* Animação da troca das frutas */
+}
+
+/* Estilo para os quadrados corretos */
+.correct {
+    background-color: #add8e6; /* Azul clarinho */
+}
+
+.spin-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #8e4b3f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.spin-button:active {
+    background-color: #70402b;
+}
+
+.result {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #8e4b3f;
+}
+
+/* Animação para o símbolo trocando para baixo */
+.spin-animation {
+    transform: translateY(100%); /* Movimento reto para baixo */
+}
+
+/* Animação de piscada para combinações vencedoras */
+.blink-animation {
+    animation: blink 1s ease infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: #00aaff;
+    }
+}
+
+/* Estilo do botão de "ganhar sempre" */
+.win-mode-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgba(255, 233, 122, 0.662);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: -50px;
+    right: -100px; /* Botão fora do quadrado da roleta */
+    transition: background-color 0.3s ease;
+}
+
+.win-mode-button.active {
+    background-color: rgb(152, 248, 163);
+}
